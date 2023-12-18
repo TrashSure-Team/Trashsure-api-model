@@ -1,6 +1,7 @@
 version: "3"
 services:
   fastapi-app:
+    container_name: fastapi-app
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,6 +9,7 @@ services:
       - "8000:80"
 
   nginx-proxy:
+    container_name: nginx
     image: nginx
     ports:
       - "80:80"
