@@ -16,10 +16,6 @@ def process_image(file) -> str:
     image = image / 255.0  
     return image
 
-@app.get('/')
-async def root():
-    return {'example':"thisis"}
-
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     try:
